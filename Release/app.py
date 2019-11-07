@@ -57,7 +57,7 @@ def probe():
 
 @app.route("/")
 def hello():
-    return "SPTAG app on Azure"
+    return jsonify(result = 'SPTAG app')
 
 # SPTAG search verb
 @app.route('/search', methods = ['POST'])
