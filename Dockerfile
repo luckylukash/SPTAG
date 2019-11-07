@@ -5,10 +5,11 @@ COPY CMakeLists.txt ./
 COPY AnnService ./AnnService/
 COPY Test ./Test/
 COPY Wrappers ./Wrappers/
+COPY Flask/SPFlask.py ./Release/
 
 RUN apt-get update && apt-get -y install wget build-essential \
     # remove the following if you don't want to build the wrappers
-    openjdk-8-jdk python3-pip swig
+    openjdk-8-jdk python3-pip swig nano
 
 # cmake >= 3.12 is required
 RUN wget "https://github.com/Kitware/CMake/releases/download/v3.14.4/cmake-3.14.4-Linux-x86_64.tar.gz" -q -O - \
@@ -26,6 +27,12 @@ RUN wget "https://dl.bintray.com/boostorg/release/1.67.0/source/boost_1_67_0.tar
 
 # build
 RUN mkdir build && cd build && cmake .. && make && cd ..
+
+# install numpy
+RUN pip3 install numpy
+
+# install Flask
+RUN pip3 install Flask
 
 # so python can find the SPTAG module
 ENV PYTHONPATH=/app/Release
