@@ -75,6 +75,7 @@ Build and compile a docker image:
 ```
 docker build -t sptag .
 ```
+
 Will build a docker container with binaries in `/app/Release/`.
 
 Once the image is built, verify by:
@@ -90,15 +91,17 @@ Run LS verify the files are there.
 ```
 ls
 ```
-Do a test run:
-```
-./test
-```
+
 
 
 ### **Verify** 
 
 Run the test (or Test.exe) in the Release folder to verify all the tests have passed.
+
+```
+cd Release
+./test
+```
 
 ### **Usage**
 
