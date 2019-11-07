@@ -46,18 +46,18 @@ sudo apt-get update
 sudo apt-get install python3.6
 ```
 
-8. Generate a Release folder in the code directory which will contain all the build targets:
+7. Generate a Release folder in the code directory which will contain all the build targets:
 ```
 mkdir build
 cd build && cmake .. && make
 ```
 
-10. Install Miniconda or Anaconda environment   
+8. Install Miniconda or Anaconda environment   
 Follow these links:
     - https://docs.conda.io/en/latest/miniconda.html
     - https://conda.io/projects/conda/en/latest/user-guide/install/linux.html
     
-11. Setup conda env for SPTAG
+10. Setup conda env for SPTAG
 ```
 conda create -n sptag python=3.6
 conda activate sptag
