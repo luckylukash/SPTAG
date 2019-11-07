@@ -72,17 +72,17 @@ conda develop <path-to-Release-folder>
 ```
 
 11. Test with Jupyter notebook
-- Open port 8080:   
+- Open port 8080:   
 Go to: Azure Portal > Networking > Add inbound security rule
 - Connect to VM (SSH or password)
 - (Optional) If you have not activated conda
 ```
 conda activate sptag
 ```
-- Start jupyter notebook
+- Start the Jupyter notebook
 ```
 jupyter notebook --ip=0.0.0.0 --port=8080
 ```
 - Open http://<your public IP address>:8080/
 - Copy and paste your token to jupyter notebook
-- Download [SPTAG test notebook file and run to test
+- Download SPTAG test notebook file and run to test
