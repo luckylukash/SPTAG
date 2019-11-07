@@ -85,4 +85,4 @@ jupyter notebook --ip=0.0.0.0 --port=8080
 ```
 - Open http://<your public IP address>:8080/
 - Copy and paste your token to jupyter notebook
-- Download SPTAG test notebook file and run to test
+- Download [SPTAG test notebook file](https://github.com/luckylukash/SPTAG/blob/master/docs/dw-sptag-new-version.ipynb) and run to test
