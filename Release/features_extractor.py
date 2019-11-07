@@ -7,6 +7,8 @@ from keras.applications.vgg19 import VGG19
 from keras.applications.resnet50 import ResNet50
 from keras.applications.inception_v3 import InceptionV3
 
+from keras import backend as K
+
 
 def get_filenames(glob_pattern, recursive=True):
     """Extracts list of filenames (full paths) based on specific glob path pattern.
@@ -93,6 +95,9 @@ def extract_features(imgs_np, pretrained_model="resnet50", pooling_method='avg')
     imgs_np = preprocess_input(imgs_np)
     embeddings_np = feat_extractor.predict(imgs_np)
     print('Features shape: ', embeddings_np.shape)
+    
+    # clear session
+    K.clear_session()
     
     return embeddings_np
 
