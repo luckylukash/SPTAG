@@ -45,20 +45,19 @@ sudo add-apt-repository ppa:jonathonf/python-3.6
 sudo apt-get update
 sudo apt-get install python3.6
 ```
-7. Generate make files
+
+8. Generate a Release folder in the code directory which will contain all the build targets:
 ```
-cmake ..
+mkdir build
+cd build && cmake .. && make
 ```
-8. Run make
-```
-make
-```
-9. Install Miniconda or Anaconda environment   
+
+10. Install Miniconda or Anaconda environment   
 Follow these links:
     - https://docs.conda.io/en/latest/miniconda.html
     - https://conda.io/projects/conda/en/latest/user-guide/install/linux.html
     
-10. Setup conda env for SPTAG
+11. Setup conda env for SPTAG
 ```
 conda create -n sptag python=3.6
 conda activate sptag
@@ -70,19 +69,3 @@ Add SPTAG to conda path
 ```
 conda develop <path-to-Release-folder>
 ```
-
-11. Test with Jupyter notebook
-- Open port 8080:   
-Go to: Azure Portal > Networking > Add inbound security rule
-- Connect to VM (SSH or password)
-- (Optional) If you have not activated conda
-```
-conda activate sptag
-```
-- Start the Jupyter notebook
-```
-jupyter notebook --ip=0.0.0.0 --port=8080
-```
-- Open http://<your public IP address>:8080/
-- Copy and paste your token to jupyter notebook
-- Download [SPTAG test notebook file](https://github.com/luckylukash/SPTAG/blob/master/docs/dw-sptag-new-version.ipynb) and run to test
