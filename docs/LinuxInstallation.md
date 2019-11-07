@@ -14,9 +14,8 @@ wget https://github.com/Kitware/CMake/releases/download/v3.14.7/cmake-3.14.7-Lin
 ```
 - Follow these instructions:
     1. `chmod +x opt/cmake-3.<your_version>.sh` (chmod makes the script executable)
-    2. `sudo bash opt/cmake-3.<your_version.sh>` (you'll need to press `y` twice)    
-    The script installs to `opt/cmake-3.<your_version>` so in order to get the `cmake` command, make a symbolic link:
-    3. `sudo ln -s opt/cmake-3.<your_version>/bin/* /usr/local/bin`
+    2. `sudo bash opt/cmake-3.<your_version.sh>` (you'll need to press `y` twice). 
+    3. The script installs to a target directory so in order to get the `cmake` command, make a symbolic link from the target directory where cmake was extracted to: `sudo ln -s <target_directory>/cmake-3.<your_version>/bin/* /usr/local/bin`
     4. `cmake --version` Note: If you encounter this error: *The program 'cmake' is currently not installed*, Please try the command from step 3 again with a full path (i.e. `sudo ln -s /home/<your name>/SPTAG/opt/cmake-3.14.7-Linux-x86_64/bin/* /usr/local/bin`)
 
 5. Install boost
@@ -25,6 +24,7 @@ wget https://github.com/Kitware/CMake/releases/download/v3.14.7/cmake-3.14.7-Lin
 wget https://dl.bintray.com/boostorg/release/1.67.0/source/boost_1_67_0.tar.gz
 ```
 (There are some [version mis-matching issues](https://github.com/microsoft/SPTAG/issues/26) and reported on github issue)
+
 6. Extract and install
 ```
 tar -xzvf boost*
