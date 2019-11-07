@@ -16,13 +16,12 @@ mkdir opt
 wget https://github.com/Kitware/CMake/releases/download/v3.14.7/cmake-3.14.7-Linux-x86_64.sh
 ```
 - Follow these instructions:
-https://askubuntu.com/questions/829310/how-to-upgrade-cmake-in-ubuntu/829311#829311
-    
-    1. `chmod +x /opt/cmake-3.<your_version>.sh` (chmod makes the script executable)
-    2. `sudo bash /opt/cmake-3.<your_version.sh>` (you'll need to press `y` twice)    
+    1. Visit https://cmake.org/download/ and download the latest binaries  
+    2. `chmod +x /opt/cmake-3.<your_version>.sh` (chmod makes the script executable)
+    3. `sudo bash /opt/cmake-3.<your_version.sh>` (you'll need to press `y` twice)    
     The script installs to `/opt/cmake-3.<your_version>` so in order to get the `cmake` command, make a symbolic link:
-    3. `sudo ln -s /opt/cmake-3.<your_version>/bin/* /usr/local/bin`
-    4. `cmake --version` Note: If you encounter this error: *The program 'cmake' is currently not installed*, Please try the command from step 3 again with a full path (i.e. `sudo ln -s /home/<your name>/SPTAG/opt/cmake-3.14.7-Linux-x86_64/bin/* /usr/local/bin`)
+    4. `sudo ln -s /opt/cmake-3.<your_version>/bin/* /usr/local/bin`
+    5. `cmake --version` Note: If you encounter this error: *The program 'cmake' is currently not installed*, Please try the command from step 3 again with a full path (i.e. `sudo ln -s /home/<your name>/SPTAG/opt/cmake-3.14.7-Linux-x86_64/bin/* /usr/local/bin`)
 
 4. Install boost
 - Download boost 1.67 version:
