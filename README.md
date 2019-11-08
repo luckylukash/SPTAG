@@ -110,24 +110,33 @@ cd Release
 The detailed usage can be found in [Get started](docs/GettingStart.md).
 The detailed parameters tunning can be found in [Parameters](docs/Parameters.md).
 
-## Hosting SPTAG with Flask application
+### Hosting SPTAG with Flask application
 Here we provide a sample alternative to the socket app by hosting a Flask application that does the prediction using SPTAG libraries. 
 
-Here is an high-level diagram that demonstrates the concept:
+Below is an high-level diagram that demonstrates the concept:
+
+![](Images/diagram.png)
+
+#### Docker
+Run below command to start the flask app in docker:
+Remember to open port 5000. Below is an example image of how to open port 5000 if you are hosting the app on azure:
+![](Images/azure_port.png)
+
+```
+docker run -it -p 5000:5000 sptag 
+```
+![](Images/azure_port.png)
 
 
-### Docker
-<port>
-
-### /sptag_indice
+#### /sptag_indice
 This is a folder for you to put your indices. Update this folder with your latest indices whenever you train and update your indices.
 
-### Sample Request
+#### Sample Request
 ```
 curl -X POST -F 'file=@<path to image>/image_0001.jpg' http://<ip address>:<port>/search
 ```
 
-### Sample Response
+#### Sample Response
 ```json
 {
   "distances":[12853.609375,11242.4453134],
