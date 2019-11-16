@@ -139,14 +139,14 @@ Remember to open port 5000. Below is an example image of how to open port 5000 i
 ### **/sptag_indice**
 This is a folder for you to put your indices. Update this folder with your latest indices whenever you train and update your indices.
 
-### Sample Request
+### **Sample Request**
 ```
 curl -X POST -F 'file=@<path to image>/image_0001.jpg' http://<ip address>:<port>/search
 ```
 You can also send the request through Postman as below:
 ![](docs/img/search_request.png)
 
-### Sample Response
+### **Sample Response**
 ```json
 {
   "distances":[12853.609375,11242.4453134],
