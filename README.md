@@ -45,11 +45,9 @@ The searches in the trees and the graph are iteratively conducted.
 * boost == 1.67.0
 
 ### **Clone the repository**
-Create a local copy of the repository to work on it.
-Start with copying 
+Create a local copy of the repository.
 
-Open the terminal and run the following command:
-```git clone "URL you have copied"
+```git clone https://github.com/microsoft/SPTAG.git
 ```
 
 ### **Install**
