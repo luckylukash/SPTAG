@@ -47,7 +47,8 @@ The searches in the trees and the graph are iteratively conducted.
 ### **Clone the repository**
 Create a local copy of the repository.
 
-```git clone https://github.com/microsoft/SPTAG.git
+```
+git clone https://github.com/microsoft/SPTAG.git
 ```
 
 ### **Install**
